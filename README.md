@@ -15,7 +15,7 @@
 ## Hosted URLS:
 Frontend Website:
 ```
-    COMING SOON
+    todo-list-full-stack-frontend-indol.vercel.app
 ```
 Backend Website:
 ```
