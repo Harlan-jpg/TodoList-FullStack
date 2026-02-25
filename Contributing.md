@@ -25,3 +25,5 @@ hotfix/[name] - This branch will automatically go into production this branch ty
     - This conatins information about the project
 - Contributing.md
     - Contributing guidlines / Information
+- .gitignore
+    - IGNORES THE FILES WE DONT NEED
