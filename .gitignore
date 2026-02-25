@@ -222,3 +222,4 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 
+_temp
