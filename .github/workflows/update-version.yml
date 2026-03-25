@@ -11,26 +11,26 @@ on:
 
 jobs:
   update-readme:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v4
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
 
-    - name: Update versions in Readme
-      id: versions
-      run: |
-        NEXT_VERSION=$(jq -r '.version' web/package.json)
-        echo "next=$NEXT_VERSION" >> $GITHUB_OUTPUT
+      - name: Update versions in Readme
+        id: versions
+        run: |
+         NEXT_VERSION=$(jq -r '.version' web/package.json)
+          echo "next=$NEXT_VERSION" >> $GITHUB_OUTPUT
 
-    - name: Update Readme
-      run: |
-        sed -i "s|<!--NEXT_VERSION-->.*<!--NEXT_VERSION_END-->|<!--NEXT_VERSION-->${{steps.versions.outputs.next}}  <!--NEXT_VERSION_END-->|" README.md
+      - name: Update Readme
+        run: |
+         sed -i "s|<!--NEXT_VERSION-->.*<!--NEXT_VERSION_END-->|<!--NEXT_VERSION-->${{steps.versions.outputs.next}}  <!--NEXT_VERSION_END-->|" README.md
 
 
-    - name: Commit and Push changes
-      run: |
-        git config user.name "github-actions"
-        git config user.email "github-actions@github.com"
-        git add README.md
-        git commit -m  "chore:Update versions in Readme" || echo "No changes to commit"
-        git push
+      - name: Commit and Push changes
+        run: |
+         git config user.name "github-actions"
+         git config user.email "github-actions@github.com"
+         git add README.md
+          git commit -m  "chore:Update versions in Readme" || echo "No changes to commit"
+          git push
