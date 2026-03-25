@@ -1,8 +1,7 @@
 on: [push]
 permissions:
   contents: write
-names:
-    - "LoC Badge"
+names: "LoC Badge"
 jobs:
   LoC:
     runs-on: ubuntu-latest
