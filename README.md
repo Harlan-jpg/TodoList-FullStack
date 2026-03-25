@@ -23,5 +23,5 @@ Backend Website:
 ```
 ## Project Versions
 iOS - N/A
-<!--NEXT_VERSION-->N/A<!--NEXT_VERSION_END-->
+<!--NEXT_VERSION-->0.1.0  <!--NEXT_VERSION_END-->
 Nest - N/A
