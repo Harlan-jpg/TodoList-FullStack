@@ -1,5 +1,4 @@
-# TodoList-FullStack
-
+# TodoList-FullStack ![Generated Lines of Code](https://harlan-jpg.github.io/TodoList-FullStack/badge.svg)
 ## Project Tech Stack 
 - Frontend
     - iOS / Swift & SwiftUI
