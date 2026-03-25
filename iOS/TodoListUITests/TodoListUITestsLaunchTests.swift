@@ -1,13 +1,13 @@
 //
-//  TodoList_FullStack_iOSUITestsLaunchTests.swift
-//  TodoList-FullStack iOSUITests
+//  TodoListUITestsLaunchTests.swift
+//  TodoListUITests
 //
-//  Created by Harlan Tasci on 2/25/26.
+//  Created by Teaching on 2/25/26.
 //
 
 import XCTest
 
-final class TodoList_FullStack_iOSUITestsLaunchTests: XCTestCase {
+final class TodoListUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
