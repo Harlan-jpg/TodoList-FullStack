@@ -23,6 +23,14 @@ jobs:
         run: |
          NEXT_VERSION=$(jq -r '.version' web/package.json)
           echo "next=$NEXT_VERSION" >> $GITHUB_OUTPUT
+         NEST_VERSION=$(jq -r '.version' backend/package.json)
+          echo "nest=$NEST_VERSION" >> $GITHUB_OUTPUT
+         
+         IOS_VERSION="NA"
+         PBXPROH=$(find . -name "project.pbxproj" | head -n 1)
+         if [-n "$PBXPROJ"]; then
+            IOS_VERSION=$(grep -m 1 "MARKETING_VERSION" "$PBXPROJ" | sed 's/.*= \(.*\); /\1/') | tr -d ' '
+            fi
 
       - name: Update Readme
         run: |
